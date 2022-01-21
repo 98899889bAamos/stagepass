@@ -594,28 +594,6 @@ header {
 /* /3 */
 
 
-/* 4 */
-.fade >img{
-	transform: scale(1.0, 1.0);
-	-webkit-animation-name: zoomin;
-  	-webkit-animation-duration: 40s;
-  	animation-name: zoomin;
-  	animation-duration: 40s;
-}
-@-webkit-keyframes zoomin {
-  from {transform: scale(1.0, 1.0);}
-  to {transform: scale(1.2, 1.5);}
-}
-
-
-@keyframes zoomin {
-  from {transform: scale(1.0, 1.0);}
-  to {transform: scale(1.2, 1.5);}
-}
-/* /4 */
-
-
-
 /* javascript */
 .active, .dot:hover{
 	border-color: #00a7ff; /* blue */
@@ -1031,6 +1009,12 @@ header {
     padding-left: 10px;
 }
 }
+
+@media screen and (max-width: 1024px) and (min-width: 1024px){
+    .button-parent {
+        margin-top: 10px;
+    }
+}
 /*End of mobile responsive*/
 
 /*End of one stop solution*/
@@ -1229,14 +1213,27 @@ header {
     display: flex;
     flex-direction: column;
 }
+.about-top-left {
+    width: 100%;
+    height: 25vh;
+}
 .about-capability-top {
     width: 100%;
     height: 100vh;
     display: flex;
     flex-direction: column; 
 }
+.about-top-right > h1 {
+    width: 100%;
+    font-size: 20px;
+}
+.about-top-right > p {
+    width: 100%;
+}
 .about-top-right {
     padding-bottom: 10px;
+    width: 100%;
+    height: 75%;
 }
 .about-capability-bottom{
     width: 100%;
@@ -1246,7 +1243,7 @@ header {
 }
 .about-capability-bottom > h1 {
     position: absolute;
-    font-size: 50px;
+    font-size: 40px;
     margin-top: 30px;
     margin-left: 10px;
     max-width: 200px;
@@ -1281,6 +1278,24 @@ header {
   to {transform: scale(1.0, 1.0);}
 }
 }
+
+@media screen and (max-width: 1024px) and (min-width: 1024px) {
+    .about-top-right {
+        padding-top: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .about-top-right > h1 {
+        color: rgb(51, 103, 214);
+        font-size: 20px;
+        width: 100%;
+        line-height: 1.0;
+    }
+    .about-capability-bottom > h1 {
+        font-size: 30px;
+    }
+}
+    
 
 
 
