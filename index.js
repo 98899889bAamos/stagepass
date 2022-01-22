@@ -30,11 +30,11 @@ const showMenu2 = (toggleId,navId) =>{
 
     if(toggle2 && nav2){
         toggle2.addEventListener('click', ()=>{
-            nav2.classList.toggle('show-menu2')
+            nav2.classList.toggle('show-menu')
         })
     }
 }
-showMenu2('nav-toggle2','nav-menu2')
+showMenu2('nav-toggle2','nav-menu')
 
 /*====REMOVE MENU MOBILE====*/
 const navLink2 = document.querySelectorAll('.top-header')
