@@ -388,7 +388,7 @@ header {
     width: 100%;
     height: 85vh;
     position: relative;
-  
+    overflow: hidden;
 }
 #myVideo {
     max-height: 90vh;
@@ -403,7 +403,7 @@ header {
     width: 100%;
     height: 85vh;
     position: absolute;
-    background: linear-gradient(to bottom, #272727, transparent);
+    background: linear-gradient(to bottom, #000, transparent);
 
 }
 .hero-top-cover > h2 {
