@@ -386,7 +386,7 @@ header {
     height: 85vh;
     position: relative;
     display: flex;
-  
+    overflow: hidden;
 }
 .hero-service {
     width: 100%;

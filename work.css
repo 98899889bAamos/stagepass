@@ -389,6 +389,7 @@ header {
     display: flex;
     flex-direction: column;
     background-color: #f5f5f5;
+    overflow: hidden;
 }
 .hero-section > h1 {
     margin-top: 50px;

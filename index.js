@@ -1,3 +1,5 @@
+
+
 /*====SHOW Left MENU====*/
 const showMenu = (toggleId,navId) =>{
   const toggle = document.getElementById(toggleId),
@@ -152,3 +154,7 @@ slideRight();
 startSlide();
 
 /*end of capability slider*/
+
+
+
+

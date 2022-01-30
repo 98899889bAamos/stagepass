@@ -404,6 +404,7 @@ header {
     height: 85vh;
     position: absolute;
     background: linear-gradient(to bottom, #000, transparent);
+    background: linear-gradient(to right, #000, transparent);
 
 }
 .hero-top-cover > h2 {
@@ -638,7 +639,7 @@ header {
     .hero-top-cover {
         width: 100%;
         height: 90vh;
-        background-image: linear-gradient(transparent, transparent);
+        background: linear-gradient(to top, #000, transparent);
     }
     .hero-top-cover > h2 {
         font-size: 20px;
@@ -711,7 +712,7 @@ header {
     }
     
     .we-create-most {
-        color: #00a7ff; /* blue */
+        color: #E6E6E6; /* blue */
     }
     .txt p{
         font-weight: bold;
@@ -971,8 +972,8 @@ header {
 /*About us and our capabilities section*/
 .about-capability {
     width: 100%;
-    height: 100vh;
-    background-color: mediumvioletred;
+    height: 110vh;
+    background: linear-gradient(to right, rgb(6, 6, 44), rgb(6, 6, 44), rgb(6, 6, 87));
     position: relative;
     display: flex;
     flex-direction: column;
@@ -980,9 +981,10 @@ header {
 .about-capability-top {
     width: 100%;
     height: 50vh;
-    background-color: #00a7ff;
+    background: linear-gradient(to right, rgb(6, 6, 44), rgb(6, 6, 87));
     display: flex;
     justify-content: space-between;
+    padding-right: 50px;
 }
 .about-top-left {
     display: flex;
@@ -1006,6 +1008,7 @@ header {
     padding-top: 20px;
     padding-left: 20px;
     padding-right: 20px;
+    border-bottom: 2px solid #aaa5a5;
 }
 .about-top-right > h1 {
     color: rgb(51, 103, 214);
@@ -1020,6 +1023,11 @@ header {
     color: #e7dfdf;
     margin-top: 10px;
     font-size: 14px;
+}
+.capability-mid {
+    width: 100%;
+    height: 10vh;
+    background: linear-gradient(to right, rgb(5, 5, 37), rgb(6, 6, 44), rgb(6, 6, 87));
 }
 .about-capability-bottom {
     width: 100%;
@@ -1170,6 +1178,7 @@ header {
     height: 100vh;
     display: flex;
     flex-direction: column; 
+    padding-right: 0;
 }
 .about-top-right > h1 {
     width: 100%;
@@ -1268,13 +1277,23 @@ header {
     flex-direction: column;
     position: relative;
     background-color: #fff;
+    position: relative;
 }
 .kalasha-container {
     width: 100%;
     height: 80vh;
     display: flex;
     justify-content: space-between;
+    overflow: hidden;
 }
+.kalasha-container-slide {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+} 
+
 .kalasha-left {
     width: 100%;
     height: 100%;
@@ -1331,6 +1350,48 @@ header {
     max-width: 350px;
     line-height: 1.0;
 }
+#arrow-left-kalasha {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    color: #E6E6E6;
+    top: 40%;
+    background-color: transparent;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 13px;
+    font-size: 20px;
+    border: 2px solid #E6E6E6;
+    border-radius: 50%;
+    margin-left: 10%;
+    cursor: pointer;
+}
+#arrow-right-kalasha {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+    color: #E6E6E6;
+    top: 40%;
+    background-color: transparent;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 13px;
+    font-size: 20px;
+    border: 2px solid #E6E6E6;
+    border-radius: 50%;
+    margin-right: 10%;
+    cursor: pointer;
+}
+
+
 
 /**/
 @media screen and (max-width: 960px) {
@@ -1343,6 +1404,12 @@ header {
         background-color: #fff;
     }
     .kalasha-container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .kalasha-container-slide {
         width: 100%;
         height: 100%;
         display: flex;
@@ -1399,6 +1466,12 @@ header {
         margin-top: 50%;
         max-width: 350px;
         line-height: 1.0;
+    }
+    #arrow-left-kalasha {
+        display: none;
+    }
+    #arrow-right-kalasha {
+        display: none;
     }
 }
 /**/

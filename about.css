@@ -384,6 +384,7 @@ header {
     height: 85vh;
     position: relative;
     background: linear-gradient(to right, rgb(3, 10, 27), rgb(13, 13, 68));
+    overflow: hidden;
 }
 .about-hero {
     width: 100%;

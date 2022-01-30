@@ -385,6 +385,7 @@ header {
     height: 130vh;
     position: relative;
     display: flex;
+    overflow: hidden;
 }
 .contact-hero {
     width: 100%;
