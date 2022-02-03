@@ -341,17 +341,13 @@ header {
         display: block;
         color: #fff;
         background-color: #000;
-        width: 50px;
-        height: 50px;
-        text-align: center;
-        justify-content: center;
-        align-items: center;
-        padding-top: 15px;
+        width: 40px;
+        height: 40px;
         border-radius: 50%;
-        margin-right: 30px;
-        margin-left: 20px;
+        margin-right: 20px;
         margin-top: 5px;
         cursor: pointer;
+        padding: 10px 5px;
     }
     .nav-drop-down {
         width: 100%;
@@ -389,6 +385,7 @@ header {
     height: 85vh;
     position: relative;
     overflow: hidden;
+    justify-self: center;
 }
 #myVideo {
     max-height: 90vh;
@@ -468,10 +465,30 @@ header {
     border-radius: 50px;
 }
 .prev {
-    margin-left: 50px;
+    margin-left: 100px;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 6px 8px;
+}
+.prev > i {
+    font-size: 30px;
 }
 .next {
-    margin-right: 50px;
+    margin-right: 100px;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 6px 8px;
+}
+.next > i {
+    font-size: 30px;
 }
 .prev:hover, .next:hover{
 	color: #00a7ff; /* blue */
@@ -489,8 +506,8 @@ header {
 }
 .dot{
 	display: inline-block;
-	width: 15px;
-	height: 15px;
+	width: 12px;
+	height: 12px;
 	border: 3px solid #E6E6E6;
 	border-radius: 50%;
 	margin: 0 10px;
@@ -534,6 +551,8 @@ header {
     line-height: 1.0;
     font-weight: 300;
 }
+
+
 /* /3 */
 
 
@@ -769,6 +788,18 @@ header {
     font-size: 20px;
     line-height: 1.0;
 }
+.header-solution > h2{
+    color: #000;
+}
+.intro-text {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.5s all ease-in-out;
+}
+.header-solution-appear {
+    opacity: 1;
+    transform: translateY(0px);
+}
 .p-solution {
     width: 100%;
     height: 15vh;
@@ -835,6 +866,9 @@ header {
     line-height: 1.0;
     padding-left: 100px;
     padding-top: 10px;
+}
+.cover-header-one > h1{
+    color: #fff;
 }
 .cover-header-two {
     color: #f5f5f5;
@@ -959,11 +993,6 @@ header {
     }
 }
 
-@media screen and (min-width: 768px){
-  .header-solution > h2 {
-     
-  }
-}
 /*End of mobile responsive*/
 
 /*End of one stop solution*/
@@ -972,7 +1001,7 @@ header {
 /*About us and our capabilities section*/
 .about-capability {
     width: 100%;
-    height: 110vh;
+    height: 140vh;
     background: linear-gradient(to right, rgb(6, 6, 44), rgb(6, 6, 44), rgb(6, 6, 87));
     position: relative;
     display: flex;
@@ -1031,7 +1060,7 @@ header {
 }
 .about-capability-bottom {
     width: 100%;
-    height: 50vh;
+    height: 80vh;
     background-color: #F6C501;
     display: flex;
     justify-content: space-between;
@@ -1048,8 +1077,8 @@ header {
 }
 .capability-left {
     display: flex;
-    flex: 2;
-    background: linear-gradient(to left, rgb(224, 147, 3), #F6C501);
+    flex: 1;
+    background: linear-gradient(to left, rgb(245, 134, 7), #F6C501);
     background-color: #F6C501;
 }
 .capability-right {
@@ -1089,7 +1118,7 @@ header {
 	color: #fff;
 	letter-spacing: 2px;
 	line-height: 35px;
-	top: 40%;
+	top: 70%;
 	left: 15%;
 	-webkit-animation-name: posi2;
   	-webkit-animation-duration: 2s;
@@ -1114,8 +1143,8 @@ header {
 }
 .pose p{
 	font-weight: bold;
-	font-size: 20px;
-    max-width: 400px;
+	font-size: 25px;
+    max-width: 250px;
 
 }
 .learn-more {
@@ -1144,21 +1173,27 @@ header {
 .arrow {
     cursor: pointer;
     position: absolute;
-    top: 50%;
-    border: 2px solid #fff;
+    top: 75%;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
     border-radius: 50px;
-    padding: 10px 10px;
+    padding: 13px 10px;
+    border: 2px solid #E6E6E6;
     font-size: 20px;
     color: #fff;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
   }
 #arrow-left {
     left: 0;
-    margin-left: 50px;
+    margin-left: 40%;
   }
     
 #arrow-right {
     right: 0;
-    margin-right: 50px;
+    margin-right: 49%;
   }
 
 /*Mobile view*/
@@ -1210,11 +1245,13 @@ header {
 
 #arrow-left {
     margin-left: 10px;
+    top: 50%;
     z-index: 1;
   }
     
 #arrow-right {
     margin-right: 10px;
+    top: 50%;
     z-index: 1;
   }
   .fade >img{
@@ -1283,11 +1320,10 @@ header {
     width: 100%;
     height: 80vh;
     display: flex;
-    justify-content: space-between;
     overflow: hidden;
 }
 .kalasha-container-slide {
-    width: 100%;
+    min-width: 100%;
     height: 80vh;
     display: flex;
     justify-content: space-between;
@@ -1408,13 +1444,17 @@ header {
         height: 100%;
         display: flex;
         flex-direction: column;
+        justify-content: space-between;
+        overflow: hidden;
     }
     .kalasha-container-slide {
-        width: 100%;
-        height: 100%;
+        min-width: 100%;
+        min-height: 100%;
         display: flex;
         flex-direction: column;
+        flex: 0;
     }
+   
     .kalasha-left {
         width: 100%;
         height: 100%;
@@ -1824,10 +1864,19 @@ header {
 }
 .quick-container-right >ul >li >h2 {
     color: #f5f5f5;
+    cursor: pointer;
+}
+.quick-container-right >ul >li >h2:hover {
+    color: #aaa5a5;
+    transition: 0.3s ease-in-out;
 }
 .quick-container-right >ul >li >h4 {
     color: #b3aeae;
     margin-left: 5px;
+    cursor: pointer;
+}
+.quick-container-right >ul >li >h4:hover {
+    color: #E6E6E6;
 }
 .footer-left > h4 {
     color: #f5f5f5;
@@ -1862,6 +1911,10 @@ header {
     cursor: pointer;
     text-decoration: none;
 }
+.footer-links-left > ul > li > a:hover {
+    color: #E6E6E6;
+    transition: 0.3s ease-in-out;
+}
 .footer-links-left > ul > li > i {
     color: #F6C501;
     padding-right: 5px;
@@ -1877,6 +1930,10 @@ header {
     color: #b3aeae;
     cursor: pointer;
     text-decoration: none;
+}
+.footer-links-right > ul > li > a:hover {
+    color: #E6E6E6;
+    transition: 0.3s ease-in-out;
 }
 .footer-links-right > ul {
     list-style-type: none;

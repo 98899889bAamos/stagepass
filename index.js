@@ -157,4 +157,18 @@ startSlide();
 
 
 
+/*fade in fade out effects*/
+function scrollAppear(){
+  var introText = document.querySelector('.intro-text');
+  var introPosition = introText.getBoundingClientRect().top;
+  var screenPosition = window.innerHeight / 1.2;
+    
+  if(introPosition < screenPosition){
+    introText.classList.add('header-solution-appear');
+  }
+}
+  window.addEventListener('scroll', scrollAppear);
+/*End of fade in fade out effects*/
+
+
 
