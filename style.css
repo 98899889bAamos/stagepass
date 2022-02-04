@@ -113,7 +113,7 @@ header {
     width: 0px;
     height: 5px;
     border-radius: 5px;
-    background: #E4405F;
+    background: linear-gradient(to right, rgb(3, 10, 27), rgb(13, 13, 68));
 }
 .nav-ul >ul > li > a:hover::before, .nav-ul > ul > li > a.active::before {
     width: 30px;
@@ -161,7 +161,8 @@ header {
 
 .nav-ul-six >button:hover {
     transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    background-color: #1DA1F2;
+    background: linear-gradient(to right, rgb(3, 10, 27), rgb(13, 13, 68));
+    color: #fff;
 }
 
 .bars {
@@ -368,6 +369,9 @@ header {
         flex: 1;
         width: 100%;
     }
+    .nav-drop-down-right > ul >li >a {
+        font-size: 20px;
+    }
 }
 /*end of mobile view navbar*/
 
@@ -508,7 +512,7 @@ header {
 	display: inline-block;
 	width: 12px;
 	height: 12px;
-	border: 3px solid #E6E6E6;
+	border: 3px solid rgb(6, 6, 87);
 	border-radius: 50%;
 	margin: 0 10px;
 	cursor: pointer;
@@ -558,7 +562,7 @@ header {
 
 /* javascript */
 .active, .dot:hover{
-	border-color: #00a7ff; /* blue */
+	border-color: #fff; /* blue */
 }
 /* /javascript */
 
@@ -811,15 +815,17 @@ header {
     padding-left: 100px;
 }
 .top-solution-button {
-    width: 80px;
+    width: 100px;
     height: 5vh;
-    border-radius: 10px;
+    border-radius: 20px;
+    padding: 5px;
     border: none;
     background-color: #000;
     color: #f5f5f5;
 }
 .top-solution-button:hover {
-    background-color: #00a7ff;
+    background: linear-gradient(to right, rgb(3, 10, 27), rgb(13, 13, 68));
+    color: #fff;
     cursor: pointer;
     transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
@@ -1128,13 +1134,13 @@ header {
 }
 
 @-webkit-keyframes posi2 {
-  from {left: 25%;}
+  from {left: 5%;}
   to {left: 15%;}
 }
 
 
 @keyframes posi2 {
-  from {left: 25%;}
+  from {left: 5%;}
   to {left: 15%;}
 }
 
@@ -1157,7 +1163,7 @@ header {
     cursor: pointer;
 }
 .learn-more:hover {
-    background-color: #00a7ff;
+    background: linear-gradient(to right, rgb(3, 10, 27), rgb(13, 13, 68));
     color: #fff;
     transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
@@ -1274,6 +1280,22 @@ header {
 
 .pose {
     margin-left: 10px;
+    -webkit-animation-name: posi2;
+  	-webkit-animation-duration: 2s;
+  	animation-name: posi2;
+  	animation-duration: 2s;
+	z-index: 1;
+}
+
+@-webkit-keyframes posi2 {
+  from {left: 25%;}
+  to {left: 15%;}
+}
+
+
+@keyframes posi2 {
+  from {left: 25%;}
+  to {left: 15%;}
 }
 
 }
@@ -1315,6 +1337,7 @@ header {
     position: relative;
     background-color: #fff;
     position: relative;
+    overflow: hidden;
 }
 .kalasha-container {
     width: 100%;
@@ -1322,110 +1345,205 @@ header {
     display: flex;
     overflow: hidden;
 }
-.kalasha-container-slide {
-    min-width: 100%;
-    height: 80vh;
-    display: flex;
-    justify-content: space-between;
-    overflow: hidden;
-} 
 
-.kalasha-left {
+.slide-container-kalasha {
     width: 100%;
     height: 100%;
-    flex: 1;
-    position: relative;
-}
-.kalasha-left > img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-.kalasha-left-cover {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background: linear-gradient(to right, #000,transparent,transparent);
-    padding-left: 100px;
-}
-.kalasha-left-cover > h2 {
-    color: #f5f5f5;
-    font-size: 30px;
-    margin-top: 70%;
-    max-width: 350px;
-    line-height: 1.0;
-}
-.kalasha-right {
-    width: 100%;
-    height: 100%;
-    flex: 1;
-    position: relative;
-}
-.kalasha-right > img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-.kalasha-right-cover {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background: linear-gradient(to left, #000,transparent, transparent);
-    padding-left: 100px;
-}
-.kalasha-right-cover > h2 {
-    color: #f5f5f5;
-    font-size: 30px;
-    margin-top: 70%;
-    max-width: 350px;
-    line-height: 1.0;
-}
-#arrow-left-kalasha {
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: 1;
-    color: #E6E6E6;
-    top: 40%;
-    background-color: transparent;
-    width: 50px;
-    height: 50px;
-    text-align: center;
+    display: flex;
     justify-content: center;
     align-items: center;
-    padding: 13px;
-    font-size: 20px;
-    border: 2px solid #E6E6E6;
-    border-radius: 50%;
-    margin-left: 10%;
-    cursor: pointer;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
 }
-#arrow-right-kalasha {
+.container-kalasha {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+.container-kalasha::-webkit-scrollbar {
+    height: 2px;
+    width: 2px;
+    border: 1px solid #d5d5d5;
+    background-color: #d5d5d5;
+}
+.container-kalasha::-webkit-scrollbar-track {
+    --webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3)
+}
+.container-kalasha::-webkit-scrollbar-thumb {
+    background: linear-gradient(to right, #eee, rgb(218, 216, 216));
+    outline: 1px solid #eee;
+}
+.arrowy {
     position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+.lefti {
+    left: 0;
+    margin-left: 100px;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 15px 10px;
+    border-radius: 50%;
+}
+.righti {
     right: 0;
-    top: 0;
-    z-index: 1;
-    color: #E6E6E6;
-    top: 40%;
+    margin-right: 100px;
+    width: 50px;
+    height: 50px;
+    border: 2px solid #fff;
+    color: #fff;
     background-color: transparent;
     width: 50px;
     height: 50px;
-    text-align: center;
+    background-color: transparent;
     justify-content: center;
     align-items: center;
-    padding: 13px;
-    font-size: 20px;
-    border: 2px solid #E6E6E6;
+    text-align: center;
+    padding: 15px 10px;
     border-radius: 50%;
-    margin-right: 10%;
-    cursor: pointer;
 }
+.thumbnaily {
+    flex: 0 0 auto;
+    cursor: pointer;
+    transform: scale(1);
+    transition: all 0.3s;
+}
+.thumbnaily:hover {
+    transform: scale(.98);
+}
+.thumbnail-one {
+    width: 50%;
+    height: 100%;
+    background-color: #eee;
+    position: relative;
+}
+.thumbnail-one > h2 {
+    position: absolute;
+    font-size: 30px;
+    max-width: 350px;
+    line-height: 1.0;
+    color: #fff;
+    margin-top: 60%;
+    margin-left: 100px;
+}
+.thumbnail-one > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.thumbnail-two {
+    width: 50%;
+    height: 100%;
+    background-color: rgb(218, 216, 216);
+    position: relative;
+}
+.thumbnail-two > h2 {
+    position: absolute;
+    font-size: 30px;
+    color: #fff;
+    margin-top: 60%;
+    margin-left: 100px;
+}
+.thumbnail-two > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.thumbnail-three {
+    min-width: 50%;
+    height: 100%;
+    background-color: rgb(189, 187, 187);
+    position: relative;
+}
+.thumbnail-three > h2 {
+    position: absolute;
+    font-size: 30px;
+    color: #fff;
+    max-width: 350px;
+    line-height: 1.0;
+    margin-top: 60%;
+    margin-left: 100px;
+}
+.thumbnail-three >img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.thumbnail-four {
+    width: 50%;
+    height: 100%;
+    background-color: #eee;
+    position: relative;
+}
+.thumbnail-four >img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.thumbnail-four > h2 {
+    position: absolute;
+    font-size: 30px;
+    color: #fff;
+    margin-top: 60%;
+    margin-left: 100px;
+}
+
+.thumbnail-five {
+    width: 50%;
+    height: 100%;
+    background-color: rgb(218, 216, 216);
+    position: relative;
+}
+.thumbnail-five > h2 {
+    position: absolute;
+    font-size: 30px;
+    color: #fff;
+    margin-top: 60%;
+    margin-left: 100px;
+}
+.thumbnail-five >img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.thumbnail-six {
+    width: 50%;
+    height: 100%;
+    background-color: rgb(189, 187, 187);
+    position: relative;
+}
+.thumbnail-six > h2 {
+    position: absolute;
+    font-size: 30px;
+    color: #fff;
+    margin-top: 60%;
+    margin-left: 100px;
+}
+.thumbnail-six >img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
 
 
 
@@ -1436,83 +1554,212 @@ header {
         height: 100%;
         display: flex;
         flex-direction: column;
-        position: relative;
-        background-color: #fff;
+        overflow: hidden;
     }
     .kalasha-container {
         width: 100%;
-        height: 100%;
+        height: 80vh;
         display: flex;
-        flex-direction: column;
-        justify-content: space-between;
         overflow: hidden;
     }
-    .kalasha-container-slide {
-        min-width: 100%;
-        min-height: 100%;
+    
+    .slide-container-kalasha {
+        width: 100%;
+        height: 100%;
         display: flex;
-        flex-direction: column;
-        flex: 0;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        position: relative;
+        overflow: hidden;
     }
-   
-    .kalasha-left {
+    .container-kalasha {
         width: 100%;
         height: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
     }
-    .kalasha-left > img {
+    .container-kalasha::-webkit-scrollbar {
+        height: 2px;
+        width: 2px;
+        border: 1px solid #d5d5d5;
+        background-color: #d5d5d5;
+    }
+    .container-kalasha::-webkit-scrollbar-track {
+        --webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3)
+    }
+    .container-kalasha::-webkit-scrollbar-thumb {
+        background: linear-gradient(to right, #eee, rgb(218, 216, 216));
+        outline: 1px solid #eee;
+    }
+    .arrowy {
+        position: absolute;
+        top: 70%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        transition: 0.3s ease-in-out;
+    }
+    .lefti {
+        left: 0;
+        margin-left: 20px;
+        width: 50px;
+        height: 50px;
+        background-color: transparent;
+        border: 2px solid #fff;
+        color: #fff;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 15px 10px;
+        border-radius: 50%;
+    }
+    .righti {
+        right: 0;
+        margin-right: 20px;
+        width: 50px;
+        height: 50px;
+        border: 2px solid #fff;
+        color: #fff;
+        background-color: transparent;
+        width: 50px;
+        height: 50px;
+        background-color: transparent;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 15px 10px;
+        border-radius: 50%;
+    }
+    .thumbnaily {
+        flex: 0 0 auto;
+        cursor: pointer;
+        transform: scale(1);
+        transition: all 0.3s;
+    }
+    .thumbnaily:hover {
+        transform: scale(.98);
+    }
+    .thumbnail-one {
+        width: 100%;
+        height: 100%;
+        background-color: #eee;
+        position: relative;
+    }
+    .thumbnail-one > h2 {
+        position: absolute;
+        font-size: 20px;
+        max-width: 350px;
+        line-height: 1.0;
+        color: #fff;
+        margin-top: 60%;
+        margin-left: 20px;
+    }
+    .thumbnail-one > img{
         width: 100%;
         height: 100%;
         object-fit: cover;
     }
-    .kalasha-left-cover {
+    
+    .thumbnail-two {
         width: 100%;
         height: 100%;
+        background-color: rgb(218, 216, 216);
+        position: relative;
+    }
+    .thumbnail-two > h2 {
         position: absolute;
-        z-index: 1;
-        top: 0;
-        left: 0;
-        background: linear-gradient(to right, #000,transparent,transparent);
-        padding-left: 10px;
-    }
-    .kalasha-left-cover > h2 {
-        color: #f5f5f5;
         font-size: 20px;
-        margin-top: 50%;
-        max-width: 350px;
-        line-height: 1.0;
+        color: #fff;
+        margin-top: 60%;
+        margin-left: 20px;
     }
-    .kalasha-right {
-        width: 100%;
-        height: 100%;
-    }
-    .kalasha-right > img {
+    .thumbnail-two > img{
         width: 100%;
         height: 100%;
         object-fit: cover;
     }
-    .kalasha-right-cover {
+    
+    .thumbnail-three {
         width: 100%;
         height: 100%;
-        position: absolute;
-        z-index: 1;
-        top: 0;
-        left: 0;
-        background: linear-gradient(to left, #000,transparent, transparent);
-        padding-left: 10px;
+        background-color: rgb(189, 187, 187);
+        position: relative;
     }
-    .kalasha-right-cover > h2 {
-        color: #f5f5f5;
+    .thumbnail-three > h2 {
+        position: absolute;
         font-size: 20px;
-        margin-top: 50%;
+        color: #fff;
         max-width: 350px;
         line-height: 1.0;
+        margin-top: 60%;
+        margin-left: 20px;
     }
-    #arrow-left-kalasha {
-        display: none;
+    .thumbnail-three >img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
-    #arrow-right-kalasha {
-        display: none;
+    .thumbnail-four {
+        width: 100%;
+        height: 100%;
+        background-color: #eee;
+        position: relative;
     }
+    .thumbnail-four >img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .thumbnail-four > h2 {
+        position: absolute;
+        font-size: 20px;
+        color: #fff;
+        margin-top: 60%;
+        margin-left: 20px;
+    }
+    
+    .thumbnail-five {
+        width: 100%;
+        height: 100%;
+        background-color: rgb(218, 216, 216);
+        position: relative;
+    }
+    .thumbnail-five > h2 {
+        position: absolute;
+        font-size: 20px;
+        color: #fff;
+        margin-top: 60%;
+        margin-left: 20px;
+    }
+    .thumbnail-five >img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .thumbnail-six {
+        width: 100%;
+        height: 100%;
+        background-color: rgb(189, 187, 187);
+        position: relative;
+    }
+    .thumbnail-six > h2 {
+        position: absolute;
+        font-size: 20px;
+        color: #fff;
+        margin-top: 60%;
+        margin-left: 20px;
+    }
+    .thumbnail-six >img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }    
+
 }
 /**/
 
@@ -1534,7 +1781,7 @@ header {
     color: #fff;
 }
 .instam > button:hover {
-    background-color: #00a7ff;
+    background: linear-gradient(to right, rgb(3, 10, 27), rgb(13, 13, 68));
     color: #fff;
     transition: 0.3s ease-in;
 }

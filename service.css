@@ -112,7 +112,7 @@ header {
     width: 0px;
     height: 5px;
     border-radius: 5px;
-    background: #E4405F;
+    background: linear-gradient(to right, rgb(3, 10, 27), rgb(13, 13, 68));
 }
 .nav-ul >ul > li > a:hover::before, .nav-ul > ul > li > a.active::before {
     width: 30px;
@@ -160,7 +160,8 @@ header {
 
 .nav-ul-six >button:hover {
     transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    background-color: #1DA1F2;
+    background: linear-gradient(to right, rgb(3, 10, 27), rgb(13, 13, 68));
+    color: #fff;
 }
 
 .bars {
@@ -340,17 +341,13 @@ header {
         display: block;
         color: #fff;
         background-color: #000;
-        width: 50px;
-        height: 50px;
-        text-align: center;
-        justify-content: center;
-        align-items: center;
-        padding-top: 15px;
+        width: 40px;
+        height: 40px;
         border-radius: 50%;
-        margin-right: 30px;
-        margin-left: 20px;
+        margin-right: 20px;
         margin-top: 5px;
         cursor: pointer;
+        padding: 10px 5px;
     }
     .nav-drop-down {
         width: 100%;
@@ -370,6 +367,10 @@ header {
     .nav-drop-down-right {
         flex: 1;
         width: 100%;
+    }
+
+    .nav-drop-down-right > ul >li >a {
+        font-size: 20px;
     }
 }
 /*end of mobile view navbar*/
@@ -418,7 +419,7 @@ header {
     color: #E6E6E6;
     margin-top: 50px;
     font-size: 25px;
-    font-weight: 300;
+    font-weight: 200;
     max-width: 550px;
     line-height: 1.0;
 }
@@ -675,9 +676,19 @@ header {
 .quick-container-right >ul >li >h2 {
     color: #f5f5f5;
 }
+.quick-container-right >ul >li >h2:hover {
+    color: #b3aeae;
+    cursor: pointer;
+    transition: 0.3s ease-in-out; 
+}
 .quick-container-right >ul >li >h4 {
     color: #b3aeae;
     margin-left: 5px;
+}
+.quick-container-right >ul >li >h4:hover {
+    color: #f5f5f5;
+    cursor: pointer;
+    transition: 0.3s ease-in-out; 
 }
 .footer-left > h4 {
     color: #f5f5f5;
@@ -712,6 +723,10 @@ header {
     cursor: pointer;
     text-decoration: none;
 }
+.footer-links-left > ul > li > a:hover {
+    color: #fff;
+    transition: 0.3s ease-in-out;
+}
 .footer-links-left > ul > li > i {
     color: #F6C501;
     padding-right: 5px;
@@ -727,6 +742,10 @@ header {
     color: #b3aeae;
     cursor: pointer;
     text-decoration: none;
+}
+.footer-links-right > ul > li > a:hover {
+    color: #fff;
+    transition: 0.3s ease-in-out;
 }
 .footer-links-right > ul {
     list-style-type: none;
